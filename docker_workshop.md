@@ -6,8 +6,6 @@
 
 ## Why Docker Compose?
 
-## Why Kubernetes?
-
 ---
 
 ## The 12 Factor App([en](12factor_app_for_beginners.md),[th](12factor_app_for_beginners_th.md))
