@@ -1,0 +1,71 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+docs/
+
+# Build tools
+Makefile
+makefile
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dependencies (usually installed in container)
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# Build outputs (built in container)
+**/bin/
+**/obj/
+**/dist/
+**/build/
+
+# Logs
+*.log
+logs/
+
+# Coverage and test outputs
+coverage/
+*.lcov
+.nyc_output
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+docker-compose*.yaml
+.dockerignore
+
+# Kubernetes manifests
+*.yml
+*.yaml
+k8s/
+
+# Environment files
+.env*
+
+# Temporary files
+tmp/
+temp/
+
+# Package files
+*.tgz
+*.tar.gz
