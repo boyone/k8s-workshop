@@ -118,7 +118,7 @@
 1. Creating the deployment
 
    ```sh
-   kubectl create deployment kinda --image=luksa/kiada:0.1
+   kubectl create deployment kiada --image=luksa/kiada:0.1
    ```
 
    - You want to create a `deployment object`.
