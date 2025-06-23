@@ -276,7 +276,9 @@ CMD ["node", "index.js"]
 
 > [lab03_working_with_database](./day1/lab03_working_with_database/api)
 
-1. Run MySQL Container
+1. build docker image call 'api:001'
+
+2. Run MySQL Container
 
    ```bash
    docker container run --rm --name mysql9 \
@@ -291,7 +293,7 @@ CMD ["node", "index.js"]
 
    - `-d`: Run in detached mode (background)
 
-2. Run API Container
+3. Run API Container
 
    ```bash
    docker container run --rm -d --name api \
@@ -299,6 +301,18 @@ CMD ["node", "index.js"]
     -e DB_PASSWORD=password  -e DB_NAME=mydatabase \
     -e DB_PORT=3306  -e PORT=3000 \
     -p 3000:3000  api:0.0.1
+   ```
+
+4. Call API
+
+   ```sh
+   curl http://localhost:3000/api/users
+   ```
+
+5. Stop DB and API
+
+   ```sh
+   docker container rm -f mysql9 api
    ```
 
 ---
@@ -329,6 +343,7 @@ CMD ["node", "index.js"]
    -e MYSQL_USER=admin \
    -e MYSQL_PASSWORD=password \
    -p 3306:3306 \
+   --network hello \
    -d mysql:9.0.1-oraclelinux9
    ```
 
@@ -336,14 +351,26 @@ CMD ["node", "index.js"]
 
    ```bash
    docker container run --rm -d --name api \
-   -e DB_HOST=<IP> \
    -e DB_USER=admin \
    -e DB_PASSWORD=password \
    -e DB_NAME=mydatabase \
    -e DB_PORT=3306 \
    -e PORT=3000 \
    -p 3000:3000 \
-   api:0.0.1
+   --network hello \
+   -d api:0.0.1
+   ```
+
+4. Call API
+
+   ```sh
+   curl http://localhost:3000/api/users
+   ```
+
+5. Stop DB and API
+
+   ```sh
+   docker container rm -f mysql9 api
    ```
 
 ---
