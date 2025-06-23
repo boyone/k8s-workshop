@@ -159,6 +159,30 @@
    cloud-provider-kind -enable-lb-port-mapping
    ```
 
+## Port Forward
+
+### Basic syntax
+
+```sh
+kubectl port-forward <resource-type>/<resource-name> <local-port>:<pod-port>
+```
+
+### Common examples
+
+```sh
+kubectl port-forward pod/my-pod 8080:80
+kubectl port-forward service/my-service 8080:80
+kubectl port-forward deployment/my-app 8080:80
+```
+
+### Advanced options
+
+```sh
+kubectl port-forward --address 0.0.0.0 pod/my-pod 8080:80
+kubectl port-forward -n my-namespace pod/my-pod 8080:80
+kubectl port-forward pod/my-pod 8080:80 8443:443
+```
+
 ## Horizontally scaling the application
 
 1. Scaling kiada
@@ -174,6 +198,7 @@
     kubectl get pods
     kubectl get pods -o wide
     ```
+
 
 ---
 
