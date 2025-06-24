@@ -4,7 +4,7 @@ import os from 'os';
 function hello(req, res) {
   res.json({
     message: 'Hello, World!',
-    version: '0.0.2',
+    version: '0.0.1',
     hostname: os.hostname(),
     environment: process.env.NODE_ENV || 'development',
   });
