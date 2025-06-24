@@ -1,5 +1,7 @@
 # README
 
+---
+
 ## [docker_workshop](./docker_workshop.md)
 
 1. [The 12 Factor App](./docker_workshop.md#the-12-factor-appenth)
@@ -19,3 +21,17 @@
 15. [Docker Registry](./docker_workshop.md#docker-registry)
 16. [Static Scan with Trivy](./docker_workshop.md#static-scan-with-trivy)
 17. [Common Commands Reference](./docker_workshop.md#common-commands-reference)
+
+---
+
+## [kubernetes workshop](./kubernetes_workshop.md)
+
+1. [Kind](./kind.md)
+2. [Pods](./pod.md)
+3. [ReplicaSets](./replicasets.md)
+4. [Deployments](./deployments.md)
+5. [Services](./services.md)
+6. [Ingress](./ingress.md)
+7. [Readiness Graceful-Shutdown](./readiness-graceful-shutdown.md)
+
+---
