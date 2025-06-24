@@ -147,6 +147,8 @@
 
 ## Exposing your application to the world
 
+### LoadBalancer
+
 1. Create service
 
    ```sh
@@ -159,15 +161,14 @@
    cloud-provider-kind -enable-lb-port-mapping
    ```
 
-## Port Forward
+### Port Forward
 
-### Basic syntax
 
 ```sh
 kubectl port-forward <resource-type>/<resource-name> <local-port>:<pod-port>
 ```
 
-### Common examples
+#### Common examples
 
 ```sh
 kubectl port-forward pod/my-pod 8080:80
@@ -175,7 +176,7 @@ kubectl port-forward service/my-service 8080:80
 kubectl port-forward deployment/my-app 8080:80
 ```
 
-### Advanced options
+#### Advanced options
 
 ```sh
 kubectl port-forward --address 0.0.0.0 pod/my-pod 8080:80
