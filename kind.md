@@ -171,17 +171,17 @@ kubectl port-forward <resource-type>/<resource-name> <local-port>:<pod-port>
 #### Common examples
 
 ```sh
-kubectl port-forward pod/my-pod 8080:80
-kubectl port-forward service/my-service 8080:80
-kubectl port-forward deployment/my-app 8080:80
+kubectl port-forward pod/<pod name> 8080:8080
+kubectl port-forward service/<service name> 8080:8080
+kubectl port-forward deployment/<app name> 8080:8080
 ```
 
 #### Advanced options
 
 ```sh
-kubectl port-forward --address 0.0.0.0 pod/my-pod 8080:80
-kubectl port-forward -n my-namespace pod/my-pod 8080:80
-kubectl port-forward pod/my-pod 8080:80 8443:443
+kubectl port-forward --address 0.0.0.0 pod/<pod name> 8080:8080
+kubectl port-forward -n <namespace> pod/<pod name> 8080:8080
+kubectl port-forward pod/<pod name> 8080:80 8443:443
 ```
 
 ## Horizontally scaling the application

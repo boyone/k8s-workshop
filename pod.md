@@ -105,7 +105,7 @@ kubectl get events
 ## Call `api/hello`
 
 ```sh
-kubectl run --image=curlimages/curl -it --restart=Never --rm client-pod curl 10.244.0.7:3000/api/hello
+kubectl run --image=curlimages/curl -it --restart=Never --rm client-pod curl <POD IP>:3000/api/hello
 ```
 
 ### Port-Forward
